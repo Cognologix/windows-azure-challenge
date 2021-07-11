@@ -1,0 +1,35 @@
+Scenario:
+   Customer wants to perform system check and monitor the resources. Identify the system issues and fix
+
+Objective:
+  A) Get aware of Windows Performance monitor tool
+  B) Minitor the system
+
+Reading/Learning:
+  https://www.windowscentral.com/how-use-performance-monitor-windows-10#open_perfmon
+
+Tasks: Create and start data collection
+1) press start, In the search box, enter Performance, and then in the Best match list, select Performance Monitor.
+2) In Performance Monitor, expand Data Collector Sets in the navigation pane, and then select User Defined.
+3) Right-click or access the context menu for User Defined, select New, and then select Data Collector Set.
+4) In the Create new Data Collector Set Wizard, enter "Task1-DataCollector" in the Name box.
+5) Select Create manually (Advanced), and then select Next.
+6) On the What type of data do you want to include? page, select the Performance counter check box, and then select Next.
+7) On the Which performance counters would you like to log? page, select Add.
+8) In the Available counters list, expand Processor, select % Processor Time, and then select Add.
+9) In the Available counters list, expand Memory, select Pages/sec, and then select Add.
+10) In the Available counters list, expand PhysicalDisk, select % Disk Time, and then select Add.
+11) Select Avg. Disk Queue Length, and then select Add.
+12) In the Available counters list, expand System, select Processor Queue Length, and then select Add.
+13) In the Available counters list, expand Network Interface, select Bytes Total/sec, select Add, and then select OK.
+14) On the Which performance counters would you like to log? page, enter 1 in the Sample interval box, and then select Next.
+15) On the Where would you like the data to be saved? page, select Next.
+16) On the Create the data collector set? page, select Save and close, and then select Finish.
+17) In Performance Monitor, in the results pane, right-click or access the context menu for Task1-DataCollector, and then select Start.
+
+
+Task:
+1) Create a workload that burns cpu and memory
+
+Task:
+1) Analyse the collected data on performance monitor

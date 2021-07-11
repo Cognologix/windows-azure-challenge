@@ -1,0 +1,41 @@
+Scenario:
+  Customer wants to deploy multiple new windows servers on their environment. 
+  Also a MS-SQL DB server should be installed and configured 
+
+Objective:
+  A) Deploy and configure Windows server 2019  
+  B) Define a non-admin user with RDP permissions
+  C) Install and configure MS-SQL server
+  D) Perform vM Backup and Restore
+  E) Perform DB Backup and Restore
+
+Windows server Setup/Requirements:
+  1) Download the windows server 2019 iso. 
+  2) Install the server 2019 on a Virtual machine (virtualbox)
+  3) Configure its network (hostonly & NAT), open RDP port
+  4) Add a user name rdpuser and provide rdp permission. 
+  5) You should be able access windows over RDP using 'rdpuser'
+
+MS-SQL server installation and configuration:
+  1) Download MS-SQL server and install it on this windows server
+  2) Configure MS-SQL users: 'admin' with administration/all permissions 
+  3) Configure MS-SQL non-admin user: 'testuser' 
+  4) Add a DB myemployee and assign 'testuser' with full permissions to this
+  5) Insert 10 employee records like EmpID, Name, Age, MobNo, Address
+  
+VM-Backup and Restore:
+  1) Take a snapshot of a VM
+  2) Delete the VM
+  3) Restore the VM using the snapshot
+
+DB-Backup and Restore:
+  1) Take a DB dump myemployee
+  2) Delete the DB myemployee
+  3) Restore using DB dump copy
+
+With this assignment, you should be able to
+1) Install & configure windows OS, should be aware of installation requirements
+2) Define network configuration
+3) Add/Delete/Update system users
+4) Manage the MS-SQL DB
+3)
